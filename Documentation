@@ -1,0 +1,15 @@
+-Ce programme ne compresse que des fichiers de type texte.
+
+-Pour compiler le code il suffit de lancer la commande "Make".
+
+-Pour compresser un fichier texte il faut tapper "./LZW -c NOM_DU_FICHIER_TEXTE_EN_ENTREE".
+
+-Pour décompresser un fichier texte il faut tapper "./LZW -d NOM_DU_FICHIER_TEXTE_EN_SORTIE".Si le fichier n'existe pas, il sera créé, sinon il sera écrasé.
+
+-Le fichier "fichier_compresse.bin" produit à la compression est le fichier compressé. Il contient uniquement des nombres sur 16 bits (quelque soit la machine).
+
+-Le programme récupère automatique le fichier "fichier_compresse.bin" à la décompression et créer/écrase le fichier donné en paramètre avec le résultat décompressé.
+
+-La taille du dictionnaire n'est pas dynamique. Elle est définie comme étant UINT16_MAX car le "fichier_compresse.bin" ne contient que des nombres sur 16 bits. Aussi, ça ne compressera pas de trop gros fichiers.
+
+-La compression se fait sans perte.
